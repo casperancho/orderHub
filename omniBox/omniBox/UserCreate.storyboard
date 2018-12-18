@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sUZ-Gj-d8M">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Create-->
+        <scene sceneID="cPt-qp-LGV">
+            <objects>
+                <viewController id="sUZ-Gj-d8M" customClass="UserCreate" customModule="omniBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z1j-UF-b6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keY-Rl-ade" userLabel="loginLabel">
+                                <rect key="frame" x="20" y="84" width="74" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-DZ-IOm" userLabel="passwordLabel">
+                                <rect key="frame" x="20" y="134" width="74" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gik-KP-m7b">
+                                <rect key="frame" x="114" y="84" width="241" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-4V-NCx">
+                                <rect key="frame" x="114" y="134" width="241" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4X-9a-eOf">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <state key="normal" title="Создать"/>
+                                <connections>
+                                    <action selector="createButton:" destination="sUZ-Gj-d8M" eventType="touchUpInside" id="z3k-Sb-fpP"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-6A-W4R">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Новый пользователь" id="wAv-c3-yh4">
+                                        <barButtonItem key="leftBarButtonItem" title="Назад" id="5xh-fo-YJR">
+                                            <connections>
+                                                <action selector="backButton:" destination="sUZ-Gj-d8M" id="lxd-6l-acb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="keY-Rl-ade" firstAttribute="top" secondItem="zhi-6A-W4R" secondAttribute="bottom" constant="20" id="2v6-ek-Cit"/>
+                            <constraint firstItem="zhi-6A-W4R" firstAttribute="top" secondItem="gzG-KU-RnN" secondAttribute="top" id="359-2O-aSq"/>
+                            <constraint firstItem="gzG-KU-RnN" firstAttribute="trailing" secondItem="M4X-9a-eOf" secondAttribute="trailing" constant="20" id="7ea-2c-jIR"/>
+                            <constraint firstItem="Gik-KP-m7b" firstAttribute="height" secondItem="keY-Rl-ade" secondAttribute="height" id="AdQ-yz-dJ4"/>
+                            <constraint firstItem="Gik-KP-m7b" firstAttribute="leading" secondItem="keY-Rl-ade" secondAttribute="trailing" constant="20" id="Axp-qe-EFF"/>
+                            <constraint firstItem="ewa-4V-NCx" firstAttribute="top" secondItem="Gik-KP-m7b" secondAttribute="bottom" constant="20" id="BgH-5Z-cfv"/>
+                            <constraint firstItem="5o8-DZ-IOm" firstAttribute="leading" secondItem="gzG-KU-RnN" secondAttribute="leading" constant="20" id="CJw-qg-Tr4"/>
+                            <constraint firstItem="gzG-KU-RnN" firstAttribute="trailing" secondItem="ewa-4V-NCx" secondAttribute="trailing" constant="20" id="GEU-Fx-xAK"/>
+                            <constraint firstItem="gzG-KU-RnN" firstAttribute="trailing" secondItem="Gik-KP-m7b" secondAttribute="trailing" constant="20" id="GQ1-7g-Xi6"/>
+                            <constraint firstItem="M4X-9a-eOf" firstAttribute="leading" secondItem="gzG-KU-RnN" secondAttribute="leading" constant="20" id="Jq4-Ed-Jv9"/>
+                            <constraint firstItem="zhi-6A-W4R" firstAttribute="trailing" secondItem="gzG-KU-RnN" secondAttribute="trailing" id="LAE-D1-ahm"/>
+                            <constraint firstItem="zhi-6A-W4R" firstAttribute="leading" secondItem="gzG-KU-RnN" secondAttribute="leading" id="asO-2o-2Mv"/>
+                            <constraint firstItem="keY-Rl-ade" firstAttribute="leading" secondItem="gzG-KU-RnN" secondAttribute="leading" constant="20" id="dTd-5m-Q81"/>
+                            <constraint firstItem="ewa-4V-NCx" firstAttribute="leading" secondItem="5o8-DZ-IOm" secondAttribute="trailing" constant="20" id="ewD-il-nTe"/>
+                            <constraint firstItem="5o8-DZ-IOm" firstAttribute="top" secondItem="Gik-KP-m7b" secondAttribute="bottom" constant="20" id="h4u-CU-z6X"/>
+                            <constraint firstItem="5o8-DZ-IOm" firstAttribute="top" secondItem="keY-Rl-ade" secondAttribute="bottom" constant="20" id="iGs-MQ-neR"/>
+                            <constraint firstItem="ewa-4V-NCx" firstAttribute="leading" secondItem="5o8-DZ-IOm" secondAttribute="trailing" constant="20" id="kdd-A1-Gyh"/>
+                            <constraint firstItem="Gik-KP-m7b" firstAttribute="leading" secondItem="keY-Rl-ade" secondAttribute="trailing" constant="20" id="niX-V4-lj4"/>
+                            <constraint firstItem="ewa-4V-NCx" firstAttribute="height" secondItem="5o8-DZ-IOm" secondAttribute="height" id="sxg-Q5-J25"/>
+                            <constraint firstItem="M4X-9a-eOf" firstAttribute="top" secondItem="5o8-DZ-IOm" secondAttribute="bottom" constant="20" id="wna-Kq-YCV"/>
+                            <constraint firstItem="keY-Rl-ade" firstAttribute="width" secondItem="5o8-DZ-IOm" secondAttribute="width" id="x0d-mX-nwb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gzG-KU-RnN"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginField" destination="Gik-KP-m7b" id="4oK-S1-cLh"/>
+                        <outlet property="passwordField" destination="ewa-4V-NCx" id="XAC-iZ-jMO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLz-m2-Dn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="-215"/>
+        </scene>
+    </scenes>
+</document>

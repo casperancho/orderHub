@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="99" id="Glk-gg-kwP" customClass="ItemCell" customModule="omniBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Glk-gg-kwP" id="IrU-4t-tUe">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wav-P7-9GZ">
+                        <rect key="frame" x="190" y="16" width="164" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-0U-BF8">
+                        <rect key="frame" x="21" y="16" width="164" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wav-P7-9GZ" firstAttribute="top" secondItem="IrU-4t-tUe" secondAttribute="topMargin" constant="5" id="22o-vK-Wc6"/>
+                    <constraint firstItem="wav-P7-9GZ" firstAttribute="leading" secondItem="S6d-0U-BF8" secondAttribute="trailing" constant="5" id="PnZ-8M-8AK"/>
+                    <constraint firstItem="S6d-0U-BF8" firstAttribute="width" secondItem="wav-P7-9GZ" secondAttribute="width" id="gVT-6y-sbV"/>
+                    <constraint firstItem="S6d-0U-BF8" firstAttribute="top" secondItem="IrU-4t-tUe" secondAttribute="topMargin" constant="5" id="gds-32-x2t"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wav-P7-9GZ" secondAttribute="trailing" constant="5" id="ln8-5z-Ozr"/>
+                    <constraint firstItem="S6d-0U-BF8" firstAttribute="leading" secondItem="IrU-4t-tUe" secondAttribute="leadingMargin" constant="5" id="mB4-Pe-6wz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="articleLabel" destination="S6d-0U-BF8" id="pJ1-6H-YST"/>
+                <outlet property="sizeLabel" destination="wav-P7-9GZ" id="awg-0p-rM9"/>
+            </connections>
+            <point key="canvasLocation" x="104.8" y="118.29085457271366"/>
+        </tableViewCell>
+    </objects>
+</document>

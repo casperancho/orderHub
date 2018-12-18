@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>604945339427-o21pi6jt4tepk1b2ou5r291a8ja0ptn9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.604945339427-o21pi6jt4tepk1b2ou5r291a8ja0ptn9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCGCmmeEQzouQOpsoevnr06vkH1sVod6QM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>604945339427</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Zakirov.omniBox</string>
+	<key>PROJECT_ID</key>
+	<string>omnibox-by-cas</string>
+	<key>STORAGE_BUCKET</key>
+	<string>omnibox-by-cas.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:604945339427:ios:5877cdbd0c1390d2</string>
+	<key>DATABASE_URL</key>
+	<string>https://omnibox-by-cas.firebaseio.com</string>
+</dict>
+</plist>

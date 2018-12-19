@@ -13,16 +13,43 @@ import FirebaseDatabase
 
 class LoginViewController : UIViewController{
     
-    private let seguename = "toMain"
+    @IBOutlet weak var segmentedCon: UISegmentedControl!
+    private let seguename = "toZakaz"
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginButton(_ sender: Any) {
         checkRegistrated()
     }
+    @IBAction func signButton(_ sender: UIButton) {
+        
+        if isSignIn {
+            if checkRegistrated() {
+                print("norm")
+                performSegue(withIdentifier: seguename, sender: UIButton.self)
+            }else{
+            print("new user")
+            }
+        }
+    }
     let realm = try! Realm()
+    var isSignIn : Bool = true
+    
+    @IBOutlet weak var signButton: UIButton!
     
     
-    func checkRegistrated(){
+    @IBAction func selectorChanged(_ sender: UISegmentedControl) {
+        
+        isSignIn = !isSignIn
+        
+        if isSignIn {
+            signButton.setTitle("Войти", for: .normal)
+        }else{
+            signButton.setTitle("Зарегестрироваться", for: .normal)
+        }
+        
+    }
+    
+    func checkRegistrated() -> Bool{
         let login = loginField.text!
         let checkingPerson = realm.objects(User.self)   //заходим  в базу
         let filtered = checkingPerson.filter("user_id == %@",login).first //фильтруем и ищем по нужным параметрам
@@ -30,17 +57,20 @@ class LoginViewController : UIViewController{
             let pass = filtered?.password as! String
             if (pass == passwordField.text!){
                 print("Excellent!")
+                return true
             } else {
                 print(pass)
                 print("POWEL HA XYU! parol")
                 callAlert()
                 passwordField.text = ""
+                return false
             }
         } else {
             print("POWEL HA XYU! persona")
             callAlert()
             loginField.text = ""
             passwordField.text = ""
+            return false
         }
     }
 

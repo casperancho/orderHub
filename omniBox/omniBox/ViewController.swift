@@ -48,9 +48,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         self.tableView.addSubview(refresh)
-        self.oldSwitch.setOn(false, animated: true)
-        oldLabel.text = "Выкупленные заказы"
-        self.oldSwitch.addTarget(self, action: #selector(changing(switch:)), for: .valueChanged)
+//        self.oldSwitch.setOn(false, animated: true)
+//        oldLabel.text = "Выкупленные заказы"
+//        self.oldSwitch.addTarget(self, action: #selector(changing(switch:)), for: .valueChanged)
         
         workFire()
         // Do any additional setup after loading the view, typically from a nib.
@@ -68,7 +68,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if !(user.isAdmin){
             self.navigationItem.rightBarButtonItems = []
         }
+        
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     func getAllOrders(){
@@ -126,10 +134,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref = Database.database().reference()
         ref.child("orders").child(self.orders[row].number).updateChildValues(["sold": !(self.orders[row].is_sold)])
 
-        let deleteAction = UITableViewRowAction(style: .normal , title: "Выкуплен") { _,_ in
+        var vikup_title = ""
+        if self.orders[row].is_sold {
+            vikup_title = "Не Выкуплен"
+        }else{
+            vikup_title = "Выкуплен"
+        }
+        
+        let deleteAction = UITableViewRowAction(style: .normal , title: vikup_title) { _,_ in
             try! self.realm.write {
             self.orders[row].is_sold = !(self.orders[row].is_sold)
-                self.oldSwitch.setOn(false, animated: true)
+//                self.oldSwitch.setOn(false, animated: true)
                 DispatchQueue.main.async {
                     self.getOrders()
                     tableView.reloadData()

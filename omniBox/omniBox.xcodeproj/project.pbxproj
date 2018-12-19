@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FEF623121CA68B7001C0246 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF623021CA68B7001C0246 /* NewOrderViewController.swift */; };
+		1FFE568221CA4B92000A8528 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE568121CA4B92000A8528 /* QRScannerController.swift */; };
+		1FFE568421CA4BD0000A8528 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE568321CA4BD0000A8528 /* QRCodeViewController.swift */; };
 		7D2CB8CB21AC68410027CD8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CB8CA21AC68410027CD8D /* LoginViewController.swift */; };
 		7D2CB8CD21AC6C4D0027CD8D /* UserCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CB8CC21AC6C4D0027CD8D /* UserCreate.storyboard */; };
 		7D2CB8CF21AC6C5C0027CD8D /* UserCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CB8CE21AC6C5C0027CD8D /* UserCreate.swift */; };
 		7D5B11FC21AF0F2000A25CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5B11FB21AF0F2000A25CE0 /* Assets.xcassets */; };
 		7D5B11FE21B1831A00A25CE0 /* itemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5B11FD21B1831A00A25CE0 /* itemCell.xib */; };
 		7D5B120221B1834200A25CE0 /* itemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5B120121B1834200A25CE0 /* itemCell.swift */; };
+		7D68607321CA884E007E1B86 /* accountInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D68607221CA884E007E1B86 /* accountInfo.storyboard */; };
+		7D68607521CA894F007E1B86 /* accountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68607421CA894F007E1B86 /* accountInfo.swift */; };
 		7D7C261621AB6313008AF36E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C261521AB6313008AF36E /* Order.swift */; };
 		7D7C261821AB65EE008AF36E /* AddOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C261721AB65EE008AF36E /* AddOrder.storyboard */; };
 		7D7C261A21AB669B008AF36E /* AddOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C261921AB669B008AF36E /* AddOrder.swift */; };
@@ -31,12 +36,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FEF623021CA68B7001C0246 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
+		1FFE568121CA4B92000A8528 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		1FFE568321CA4BD0000A8528 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		7D2CB8CA21AC68410027CD8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7D2CB8CC21AC6C4D0027CD8D /* UserCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserCreate.storyboard; sourceTree = "<group>"; };
 		7D2CB8CE21AC6C5C0027CD8D /* UserCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreate.swift; sourceTree = "<group>"; };
 		7D5B11FB21AF0F2000A25CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D5B11FD21B1831A00A25CE0 /* itemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemCell.xib; sourceTree = "<group>"; };
 		7D5B120121B1834200A25CE0 /* itemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCell.swift; sourceTree = "<group>"; };
+		7D68607221CA884E007E1B86 /* accountInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = accountInfo.storyboard; sourceTree = "<group>"; };
+		7D68607421CA894F007E1B86 /* accountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfo.swift; sourceTree = "<group>"; };
 		7D7C261521AB6313008AF36E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		7D7C261721AB65EE008AF36E /* AddOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOrder.storyboard; sourceTree = "<group>"; };
 		7D7C261921AB669B008AF36E /* AddOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrder.swift; sourceTree = "<group>"; };
@@ -112,6 +122,8 @@
 				7DD61CA021A6ABA5009D5294 /* AppDelegate.swift */,
 				7DD61CA221A6ABA5009D5294 /* ViewController.swift */,
 				7DD61CA421A6ABA5009D5294 /* Main.storyboard */,
+				7D68607221CA884E007E1B86 /* accountInfo.storyboard */,
+				7D68607421CA894F007E1B86 /* accountInfo.swift */,
 				7DF271DE21AE8AFB007C270C /* DisplayViewController.swift */,
 				7DD61CA921A6ABA6009D5294 /* LaunchScreen.storyboard */,
 				7D5B11FB21AF0F2000A25CE0 /* Assets.xcassets */,
@@ -121,6 +133,9 @@
 				7D7C261521AB6313008AF36E /* Order.swift */,
 				7D7C261721AB65EE008AF36E /* AddOrder.storyboard */,
 				7D7C261921AB669B008AF36E /* AddOrder.swift */,
+				1FEF623021CA68B7001C0246 /* NewOrderViewController.swift */,
+				1FFE568121CA4B92000A8528 /* QRScannerController.swift */,
+				1FFE568321CA4BD0000A8528 /* QRCodeViewController.swift */,
 				7D2CB8CA21AC68410027CD8D /* LoginViewController.swift */,
 				7D2CB8CC21AC6C4D0027CD8D /* UserCreate.storyboard */,
 				7D2CB8CE21AC6C5C0027CD8D /* UserCreate.swift */,
@@ -195,6 +210,7 @@
 			files = (
 				7DF271DB21AD7568007C270C /* orderCell.xib in Resources */,
 				7DA414A021B607F700C5AE7C /* GoogleService-Info.plist in Resources */,
+				7D68607321CA884E007E1B86 /* accountInfo.storyboard in Resources */,
 				7DD61CAB21A6ABA6009D5294 /* LaunchScreen.storyboard in Resources */,
 				7DD61CA621A6ABA5009D5294 /* Main.storyboard in Resources */,
 				7D7C261821AB65EE008AF36E /* AddOrder.storyboard in Resources */,
@@ -216,6 +232,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-omniBox/Pods-omniBox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -226,6 +243,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -271,12 +289,16 @@
 				7DD61CA321A6ABA5009D5294 /* ViewController.swift in Sources */,
 				7D5B120221B1834200A25CE0 /* itemCell.swift in Sources */,
 				7D7C261621AB6313008AF36E /* Order.swift in Sources */,
+				7D68607521CA894F007E1B86 /* accountInfo.swift in Sources */,
 				7DD61CA121A6ABA5009D5294 /* AppDelegate.swift in Sources */,
 				7DA414A221B60E9100C5AE7C /* UserFire.swift in Sources */,
 				7DF271DF21AE8AFB007C270C /* DisplayViewController.swift in Sources */,
 				7D7C261A21AB669B008AF36E /* AddOrder.swift in Sources */,
+				1FEF623121CA68B7001C0246 /* NewOrderViewController.swift in Sources */,
 				7D2CB8CF21AC6C5C0027CD8D /* UserCreate.swift in Sources */,
 				7DF271DD21AD7576007C270C /* orderCell.swift in Sources */,
+				1FFE568221CA4B92000A8528 /* QRScannerController.swift in Sources */,
+				1FFE568421CA4BD0000A8528 /* QRCodeViewController.swift in Sources */,
 				7DD61CB321A6B0A0009D5294 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TNSCV9KL43;
+				DEVELOPMENT_TEAM = P9784LPU65;
 				INFOPLIST_FILE = omniBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TNSCV9KL43;
+				DEVELOPMENT_TEAM = P9784LPU65;
 				INFOPLIST_FILE = omniBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (

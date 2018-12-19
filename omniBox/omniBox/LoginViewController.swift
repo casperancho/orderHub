@@ -15,11 +15,11 @@ import FirebaseDatabase
 class LoginViewController : UIViewController{
     
     @IBOutlet weak var segmentedCon: UISegmentedControl!
-    private let seguename = "toZakaz"
+    private let seguename = "zakzak"
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginButton(_ sender: Any) {
-        checkRegistrated()
+        //checkRegistrated()
     }
     @IBAction func signButton(_ sender: UIButton) {
         
@@ -29,6 +29,8 @@ class LoginViewController : UIViewController{
                 performSegue(withIdentifier: seguename, sender: UIButton.self)
             }else{
             print("new user")
+                //signButton.setImage(_ image: UIImage("regButton"), for: UIControl.State.Normal)
+                
             }
         }
     }
@@ -43,9 +45,11 @@ class LoginViewController : UIViewController{
         isSignIn = !isSignIn
         
         if isSignIn {
-            signButton.setTitle("Войти", for: .normal)
+            signButton.setTitle("", for: .normal)
+            signButton.setImage(UIImage(named: "enterButton")?.withRenderingMode(.alwaysOriginal), for: .normal)
         }else{
-            signButton.setTitle("Зарегестрироваться", for: .normal)
+            signButton.setTitle("", for: .normal)
+            signButton.setImage(UIImage(named: "regButton")?.withRenderingMode(.alwaysOriginal), for: .normal)
         }
         
     }
@@ -55,7 +59,7 @@ class LoginViewController : UIViewController{
         let checkingPerson = realm.objects(User.self)   //заходим  в базу
         let filtered = checkingPerson.filter("user_id == %@",login).first //фильтруем и ищем по нужным параметрам
         if filtered != nil {
-            let pass = filtered?.password as! String
+            let pass = filtered!.password 
             if (pass == passwordField.text!){
                 print("Excellent!")
                 return true
@@ -87,8 +91,9 @@ func callAlert(){
 
     
     override func viewWillAppear(_ animated: Bool) {
-        loginField.text = ""
-        passwordField.text = ""
+
+//        self.loginField.text = ""
+//        self.passwordField.text = ""
     }
     
     
@@ -115,11 +120,11 @@ func callAlert(){
                 guard let dictionary = snap.value as? [String : AnyObject] else {
                     return
                 }
-                var user_id = dictionary["user_id"] as? String
-                var password = dictionary["password"] as? String
-                var isAdmin = dictionary["isAdmin"] as? Bool
+                let user_id = dictionary["user_id"] as? String
+                let password = dictionary["password"] as? String
+                let isAdmin = dictionary["isAdmin"] as? Bool
 
-                var newUser = User()
+                let newUser = User()
                 newUser.user_id = user_id!
                 newUser.password = password!
                 newUser.isAdmin = isAdmin!
@@ -131,6 +136,9 @@ func callAlert(){
             }
         })
     }
+    
+    
+    
     
     override func viewDidLoad() {
         downloadFromFire()

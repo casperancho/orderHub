@@ -48,7 +48,7 @@ class AddOrder: UIViewController, UITableViewDelegate, UITableViewDataSource {
         new_order.fio = self.fioText.text!
         new_order.phone_number = self.phoneText.text!
         new_order.arr_date = today
-        var date_to = Calendar.current.date(byAdding: .day, value: 5, to: (dateFormatter.date(from: today))!) //add 5 day
+        let date_to = Calendar.current.date(byAdding: .day, value: 5, to: (dateFormatter.date(from: today))!) //add 5 day
         new_order.date_to = dateFormatter.string(from: date_to!)
         new_order.items.append(objectsIn: items)
         print(new_order)

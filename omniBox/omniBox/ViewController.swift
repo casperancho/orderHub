@@ -13,14 +13,32 @@ import FirebaseDatabase
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBAction func switchedAction(_ sender: Any) {
-        
-    }
+   
+  
     
-    
+    var full = false
     @IBOutlet weak var oldLabel: UILabel!
     @IBOutlet weak var oldSwitch: UISwitch!
-
+    
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBAction func segControl(_ sender: Any) {
+        full = !full
+        if full{
+            getAllOrders()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }else{
+           getOrders()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     let realm = try! Realm()
     var user = User()
@@ -48,11 +66,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         self.tableView.addSubview(refresh)
+        if user.user_id == "user"{
+            let vc = LoginViewController()
+            self.present(vc,animated: true, completion: nil)
+        }
 //        self.oldSwitch.setOn(false, animated: true)
 //        oldLabel.text = "Выкупленные заказы"
 //        self.oldSwitch.addTarget(self, action: #selector(changing(switch:)), for: .valueChanged)
         
         workFire()
+        self.navigationItem.title = user.user_id
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -75,10 +98,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        
         // Show the Navigation Bar
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    @IBAction func exitButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     func getAllOrders(){
         let zakazy = realm.objects(Order.self)
         orders = Array(zakazy)
@@ -128,7 +155,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 //здесь меняется статус заказа
         let row = indexPath.row
-        let editingRow = orders[row]
+        let _ = orders[row]//let editingRow =
         
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -193,13 +220,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 var special_arr = [Item]()
                 for values in (items_from!.values){
-                    var whos = Item()
+                    let whos = Item()
                     whos.item_name = (values["article"] as? String)!
                     whos.size = (values["size"] as? String)!
                     special_arr.append(whos)
                 }
                 
-                var cur = Order()
+                let cur = Order()
                 cur.items.append(objectsIn: special_arr)
                 cur.date_to = date_to!
                 cur.fio = name!

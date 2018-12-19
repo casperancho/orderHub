@@ -123,11 +123,20 @@ class DisplayOrderViewController : UIViewController, UITableViewDelegate, UITabl
     }
     @IBAction func callButton(_ sender: Any) {
         print("im here")
-        var phone = "TEL://\(order.phone_number)"
+        let phone = "TEL://\(order.phone_number)"
         print(phone)
-        var url: NSURL = NSURL(string: phone)!
+        let url: NSURL = NSURL(string: phone)!
         UIApplication.shared.openURL(url as URL)
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
 }

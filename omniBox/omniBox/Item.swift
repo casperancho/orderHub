@@ -13,7 +13,7 @@ class Item: Object{
     @objc dynamic var item_name : String = ""
     @objc dynamic var desc : String = ""
     @objc dynamic var price : String  = ""
-    @objc dynamic var photo_url : String  = ""
+    @objc dynamic var photo_url : String  = "https://socialsharing.info/wp-content/uploads/reebok-unveils-new-delta-logo-logo-designer-reebok-symbol-meaning.jpg"
     @objc dynamic var size : String = ""
     
 }

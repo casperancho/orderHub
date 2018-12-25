@@ -21,6 +21,9 @@
 		7D7C261621AB6313008AF36E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C261521AB6313008AF36E /* Order.swift */; };
 		7D7C261821AB65EE008AF36E /* AddOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7C261721AB65EE008AF36E /* AddOrder.storyboard */; };
 		7D7C261A21AB669B008AF36E /* AddOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7C261921AB669B008AF36E /* AddOrder.swift */; };
+		7D91EB1A21D1B92800316EC5 /* collectionview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D91EB1921D1B92800316EC5 /* collectionview.storyboard */; };
+		7D91EB1C21D1B93500316EC5 /* collectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91EB1B21D1B93500316EC5 /* collectionViewController.swift */; };
+		7D91EB1E21D1B9CC00316EC5 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91EB1D21D1B9CC00316EC5 /* collectionViewCell.swift */; };
 		7DA414A021B607F700C5AE7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DA4149F21B607F700C5AE7C /* GoogleService-Info.plist */; };
 		7DA414A221B60E9100C5AE7C /* UserFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA414A121B60E9100C5AE7C /* UserFire.swift */; };
 		7DD61CA121A6ABA5009D5294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD61CA021A6ABA5009D5294 /* AppDelegate.swift */; };
@@ -50,6 +53,9 @@
 		7D7C261521AB6313008AF36E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		7D7C261721AB65EE008AF36E /* AddOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOrder.storyboard; sourceTree = "<group>"; };
 		7D7C261921AB669B008AF36E /* AddOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrder.swift; sourceTree = "<group>"; };
+		7D91EB1921D1B92800316EC5 /* collectionview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = collectionview.storyboard; sourceTree = "<group>"; };
+		7D91EB1B21D1B93500316EC5 /* collectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewController.swift; sourceTree = "<group>"; };
+		7D91EB1D21D1B9CC00316EC5 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
 		7DA4149F21B607F700C5AE7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DA414A121B60E9100C5AE7C /* UserFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFire.swift; sourceTree = "<group>"; };
 		7DD61C9D21A6ABA5009D5294 /* omniBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omniBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +150,9 @@
 				7D5B11FD21B1831A00A25CE0 /* itemCell.xib */,
 				7D5B120121B1834200A25CE0 /* itemCell.swift */,
 				7DA414A121B60E9100C5AE7C /* UserFire.swift */,
+				7D91EB1921D1B92800316EC5 /* collectionview.storyboard */,
+				7D91EB1D21D1B9CC00316EC5 /* collectionViewCell.swift */,
+				7D91EB1B21D1B93500316EC5 /* collectionViewController.swift */,
 			);
 			path = omniBox;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				7D5B11FC21AF0F2000A25CE0 /* Assets.xcassets in Resources */,
 				7D5B11FE21B1831A00A25CE0 /* itemCell.xib in Resources */,
 				7D2CB8CD21AC6C4D0027CD8D /* UserCreate.storyboard in Resources */,
+				7D91EB1A21D1B92800316EC5 /* collectionview.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +242,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-omniBox/Pods-omniBox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -243,6 +255,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -288,6 +302,7 @@
 				7DD61CB521A6B43B009D5294 /* Item.swift in Sources */,
 				7DD61CA321A6ABA5009D5294 /* ViewController.swift in Sources */,
 				7D5B120221B1834200A25CE0 /* itemCell.swift in Sources */,
+				7D91EB1C21D1B93500316EC5 /* collectionViewController.swift in Sources */,
 				7D7C261621AB6313008AF36E /* Order.swift in Sources */,
 				7D68607521CA894F007E1B86 /* accountInfo.swift in Sources */,
 				7DD61CA121A6ABA5009D5294 /* AppDelegate.swift in Sources */,
@@ -299,6 +314,7 @@
 				7DF271DD21AD7576007C270C /* orderCell.swift in Sources */,
 				1FFE568221CA4B92000A8528 /* QRScannerController.swift in Sources */,
 				1FFE568421CA4BD0000A8528 /* QRCodeViewController.swift in Sources */,
+				7D91EB1E21D1B9CC00316EC5 /* collectionViewCell.swift in Sources */,
 				7DD61CB321A6B0A0009D5294 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

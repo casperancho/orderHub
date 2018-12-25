@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - Charts (3.2.1):
     - Charts/Core (= 3.2.1)
   - Charts/Core (3.2.1)
@@ -67,6 +70,8 @@ PODS:
     - Realm (= 3.11.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.8)
+  - AlamofireImage (~> 3.5)
   - Charts
   - Firebase
   - Firebase/Core
@@ -75,6 +80,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
     - Charts
     - Firebase
     - FirebaseAnalytics
@@ -89,6 +96,8 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Firebase: 9190018e296139d938b99521cde0c15a6e8d2946
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
@@ -102,6 +111,6 @@ SPEC CHECKSUMS:
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
 
-PODFILE CHECKSUM: 62101b4a52166e32dd0287ea313ca75388724833
+PODFILE CHECKSUM: f7dcd49d1edbf36057dcc77e8cf3d81597bec734
 
 COCOAPODS: 1.5.3

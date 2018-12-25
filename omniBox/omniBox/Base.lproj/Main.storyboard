@@ -76,20 +76,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ej-cJ-hIX">
+                                <rect key="frame" x="50" y="587" width="275" height="30"/>
+                                <state key="normal" title="CollectionView"/>
+                                <connections>
+                                    <segue destination="Hsd-qu-asx" kind="showDetail" id="eyt-1B-rSe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to enter admin admin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-yU-7p3">
+                                <rect key="frame" x="50" y="516.5" width="275" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7ej-cJ-hIX" firstAttribute="leading" secondItem="pBX-qI-MOk" secondAttribute="leading" constant="50" id="31n-fk-FAr"/>
+                            <constraint firstItem="pBX-qI-MOk" firstAttribute="bottom" secondItem="7ej-cJ-hIX" secondAttribute="bottom" constant="50" id="BdJ-rh-w9X"/>
                             <constraint firstItem="pBX-qI-MOk" firstAttribute="trailing" secondItem="JbY-z5-Z6V" secondAttribute="trailing" constant="30" id="Dbc-7f-iep"/>
                             <constraint firstItem="uOl-GN-4Jb" firstAttribute="top" secondItem="pBX-qI-MOk" secondAttribute="top" constant="15" id="GD3-S3-ihw"/>
                             <constraint firstItem="7JY-dU-hS2" firstAttribute="top" secondItem="PX5-X1-Vo6" secondAttribute="bottom" constant="75" id="H0k-gG-f7P"/>
                             <constraint firstItem="uOl-GN-4Jb" firstAttribute="leading" secondItem="pBX-qI-MOk" secondAttribute="leading" constant="15" id="HqJ-ez-Jnm"/>
                             <constraint firstItem="uOl-GN-4Jb" firstAttribute="centerX" secondItem="eYf-A7-QRK" secondAttribute="centerX" id="NCE-X7-DHF"/>
+                            <constraint firstItem="lPW-yU-7p3" firstAttribute="leading" secondItem="pBX-qI-MOk" secondAttribute="leading" constant="50" id="PKE-g7-CJL"/>
                             <constraint firstItem="pBX-qI-MOk" firstAttribute="trailing" secondItem="uOl-GN-4Jb" secondAttribute="trailing" constant="15" id="TXh-h0-5j5"/>
                             <constraint firstItem="PX5-X1-Vo6" firstAttribute="top" secondItem="JbY-z5-Z6V" secondAttribute="bottom" constant="30" id="Zmm-7N-wwJ"/>
+                            <constraint firstItem="pBX-qI-MOk" firstAttribute="trailing" secondItem="7ej-cJ-hIX" secondAttribute="trailing" constant="50" id="ehe-AE-e21"/>
                             <constraint firstItem="JbY-z5-Z6V" firstAttribute="leading" secondItem="pBX-qI-MOk" secondAttribute="leading" constant="30" id="lgl-9j-pgR"/>
                             <constraint firstItem="PX5-X1-Vo6" firstAttribute="leading" secondItem="pBX-qI-MOk" secondAttribute="leading" constant="30" id="mij-a2-kfu"/>
                             <constraint firstItem="7JY-dU-hS2" firstAttribute="centerX" secondItem="eYf-A7-QRK" secondAttribute="centerX" id="oHN-xV-4Ml"/>
                             <constraint firstItem="JbY-z5-Z6V" firstAttribute="top" secondItem="uOl-GN-4Jb" secondAttribute="bottom" constant="30" id="sbE-BS-xdn"/>
+                            <constraint firstItem="pBX-qI-MOk" firstAttribute="trailing" secondItem="lPW-yU-7p3" secondAttribute="trailing" constant="50" id="uki-nz-JFy"/>
+                            <constraint firstItem="7ej-cJ-hIX" firstAttribute="top" secondItem="lPW-yU-7p3" secondAttribute="bottom" constant="50" id="vig-51-WR4"/>
                             <constraint firstItem="pBX-qI-MOk" firstAttribute="trailing" secondItem="PX5-X1-Vo6" secondAttribute="trailing" constant="30" id="yUX-JH-vXZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pBX-qI-MOk"/>
@@ -107,13 +126,21 @@
             </objects>
             <point key="canvasLocation" x="-2393" y="107"/>
         </scene>
+        <!--collectionview-->
+        <scene sceneID="dlR-iW-jsw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="collectionview" id="Hsd-qu-asx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GxY-Td-nCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2791" y="476"/>
+        </scene>
         <!--goodsTable-->
         <scene sceneID="axT-D5-TSY">
             <objects>
                 <viewControllerPlaceholder storyboardName="goodsTable" id="vJV-fV-N3p" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXh-Lz-j9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2394" y="468"/>
+            <point key="canvasLocation" x="-2202" y="481"/>
         </scene>
         <!--UserCreate-->
         <scene sceneID="H5m-ai-WQy">

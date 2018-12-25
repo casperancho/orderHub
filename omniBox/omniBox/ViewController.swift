@@ -216,6 +216,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 var items_from = dictionary ["items"] as? [String : AnyObject]
                 let call_status = dictionary["call_status"] as? Bool
                 let comments = dictionary["comments"] as? String
+            
 //                print(items_from)
                 
                 var special_arr = [Item]()
@@ -223,6 +224,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let whos = Item()
                     whos.item_name = (values["article"] as? String)!
                     whos.size = (values["size"] as? String)!
+                    whos.photo_url = (values["photo_url"] as? String)!
                     special_arr.append(whos)
                 }
                 
